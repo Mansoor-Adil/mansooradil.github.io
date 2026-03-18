@@ -1,113 +1,131 @@
-// ===============================
-// NAVBAR SCROLL EFFECT
-// ===============================
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-
-// ===============================
-// MOBILE MENU TOGGLE
-// ===============================
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+body {
+margin:0;
+font-family: 'Inter', sans-serif;
+background:#050810;
+color:white;
+scroll-behavior:smooth;
 }
 
-
-// ===============================
-// CLOSE MENU ON CLICK
-// ===============================
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
-
-
-// ===============================
-// SCROLL ANIMATION (FADE-IN)
-// ===============================
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, {
-    threshold: 0.1
-});
-
-// Elements to animate
-document.querySelectorAll('.glass-panel, .section-title, .project-card').forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "0.6s ease";
-
-    observer.observe(el);
-});
-
-
-// ===============================
-// SIMPLE STAR BACKGROUND (OPTIONAL)
-// ===============================
-function createStars(id, count) {
-    const container = document.getElementById(id);
-    if (!container) return;
-
-    let stars = '';
-
-    for (let i = 0; i < count; i++) {
-        stars += `
-        <div style="
-            position:absolute;
-            top:${Math.random() * 100}vh;
-            left:${Math.random() * 100}vw;
-            width:2px;
-            height:2px;
-            background:white;
-            opacity:${Math.random()};
-        "></div>`;
-    }
-
-    container.innerHTML = stars;
+/* BACKGROUND */
+.bg-animation .gradient {
+position:fixed;
+width:100%;
+height:100%;
+background: radial-gradient(circle at 20% 30%, #00f0ff33, transparent),
+            radial-gradient(circle at 80% 70%, #ff00ff33, transparent);
+z-index:-1;
+animation: move 10s infinite alternate;
 }
 
-// Initialize stars (only if you keep them in HTML)
-createStars('stars', 80);
+@keyframes move {
+0% {transform:translate(0,0);}
+100% {transform:translate(50px,50px);}
+}
 
+/* NAV */
+.navbar {
+position:fixed;
+width:100%;
+top:0;
+padding:15px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+}
 
-// ===============================
-// ACTIVE NAV LINK HIGHLIGHT
-// ===============================
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-links a");
+.nav-links {
+display:flex;
+gap:20px;
+list-style:none;
+}
 
-window.addEventListener("scroll", () => {
-    let current = "";
+.nav-links a {
+color:white;
+text-decoration:none;
+}
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
+/* HERO */
+.hero {
+height:100vh;
+display:flex;
+align-items:center;
+padding:50px;
+}
 
-    navItems.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-        }
-    });
-});
+.hero-container {
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+}
+
+.hero-text {
+max-width:500px;
+}
+
+.hero-buttons {
+margin-top:20px;
+display:flex;
+gap:15px;
+}
+
+.btn {
+padding:10px 20px;
+border-radius:30px;
+text-decoration:none;
+}
+
+.primary {
+background:linear-gradient(45deg,#00f0ff,#007bff);
+color:white;
+}
+
+.secondary {
+border:1px solid white;
+color:white;
+}
+
+.socials {
+margin-top:20px;
+display:flex;
+gap:15px;
+}
+
+.socials a {
+font-size:20px;
+color:white;
+}
+
+/* IMAGE */
+.hero-img img {
+width:300px;
+border-radius:20px;
+animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+0% {transform:translateY(0);}
+50% {transform:translateY(-10px);}
+100% {transform:translateY(0);}
+}
+
+/* SECTIONS */
+.section {
+padding:100px 50px;
+}
+
+/* GLASS */
+.glass {
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:15px;
+margin:20px;
+padding:20px;
+}
+
+/* CARDS */
+.card {
+background:rgba(255,255,255,0.05);
+padding:20px;
+margin:10px;
+border-radius:10px;
+}
