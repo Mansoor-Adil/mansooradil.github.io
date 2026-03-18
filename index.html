@@ -1,170 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mansoor Adil | GIS & Disaster Risk Researcher</title>
+    <title>Mansoor Adil</title>
 
-    <meta name="description"
-        content="Portfolio of Mansoor Adil, PhD Researcher specializing in GIS, remote sensing, disaster risk, and climate resilience.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo">MA<span class="highlight">.</span></a>
+<!-- Background -->
+<div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+</div>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-content">
+        <a href="#" class="logo">MA</a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="hero-container">
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-container">
 
-            <div class="hero-text">
-                <h2>Hello, I'm</h2>
-                <h1>Mansoor Adil</h1>
-                <h3>PhD Researcher | GIS & Disaster Risk</h3>
+        <div class="hero-text">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="name">Mansoor Adil</h1>
+            <h2 class="title">PhD Researcher | GIS & Remote Sensing</h2>
 
-                <p>
-                    Working at the intersection of geospatial science, disaster resilience, and climate risk.
-                    My research focuses on applying GIS, remote sensing, and spatial analytics to improve
-                    decision-making for resilient infrastructure and communities.
-                </p>
-
-                <div class="hero-cta">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="#" class="btn secondary-btn">Download CV</a>
-                </div>
-
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-
-            <div class="hero-image-wrapper">
-                <img src="profile.jpg" alt="Mansoor Adil" class="hero-image">
-            </div>
-
-        </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <div class="container glass-panel">
-
-            <h2 class="section-title">About Me</h2>
-
-            <p>
-                I am a PhD researcher at Florida State University and a member of the RIDER Center.
-                My work focuses on disaster risk reduction, climate resilience, and infrastructure systems.
+            <p class="subtitle">
+                Building geospatial tools and machine learning models for climate risk and infrastructure resilience.
             </p>
 
-            <p>
-                I use GIS, remote sensing, and spatial modeling to analyze hazards such as floods and
-                extreme events. My goal is to develop data-driven solutions that support resilient
-                planning and policy decisions.
-            </p>
-
-        </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" class="section">
-        <div class="container">
-
-            <h2 class="section-title">Research Interests</h2>
-
-            <ul>
-                <li>Disaster Risk Modeling</li>
-                <li>Geospatial Analytics</li>
-                <li>Climate Change & Resilience</li>
-                <li>Remote Sensing</li>
-                <li>Infrastructure Systems</li>
-            </ul>
-
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-
-            <h2 class="section-title">Projects</h2>
-
-            <div class="projects-grid">
-
-                <div class="project-card glass-panel">
-                    <h3>Flood Risk Mapping</h3>
-                    <p>GIS-based flood hazard analysis and spatial modeling.</p>
-                </div>
-
-                <div class="project-card glass-panel">
-                    <h3>GIS Dashboard</h3>
-                    <p>Interactive dashboards for spatial data visualization.</p>
-                </div>
-
-                <div class="project-card glass-panel">
-                    <h3>Remote Sensing Analysis</h3>
-                    <p>Satellite data analysis for environmental monitoring.</p>
-                </div>
-
+            <div class="hero-cta">
+                <a href="#" class="btn primary-btn">View Work</a>
+                <a href="#" class="btn secondary-btn">Contact</a>
             </div>
 
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-        <div class="container">
-
-            <h2 class="section-title">Skills</h2>
-
-            <ul>
-                <li>ArcGIS / QGIS</li>
-                <li>Google Earth Engine</li>
-                <li>Python (Geospatial)</li>
-                <li>Remote Sensing</li>
-                <li>Data Analysis</li>
-            </ul>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="container">
-
-            <h3>Contact</h3>
-
-            <p>Email: madil@fsu.edu</p>
-
-            <div class="footer-socials">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
             </div>
+        </div>
 
-            <p>&copy; www.linkedin.com/in/mansoor-adil-8348951b6</p>
+        <div class="hero-image-wrapper">
+            <div class="hero-image-glow"></div>
+            <img src="profile.jpg" class="hero-image">
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="glass-panel">
+            <p>
+                I am a PhD researcher at Florida State University focusing on GIS,
+                climate risk, and infrastructure resilience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section bg-alt">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="glass-panel project-card">
+                <i class="fas fa-map project-icon"></i>
+                <h3 class="project-title">Flood Risk Mapping</h3>
+                <p class="project-desc">GIS-based flood modeling and visualization.</p>
+            </div>
+
+            <div class="glass-panel project-card">
+                <i class="fas fa-brain project-icon"></i>
+                <h3 class="project-title">ML Climate Model</h3>
+                <p class="project-desc">Machine learning for climate prediction.</p>
+            </div>
 
         </div>
-    </footer>
+    </div>
+</section>
 
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <p class="copyright">© 2026 Mansoor Adil</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
